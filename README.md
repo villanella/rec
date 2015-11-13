@@ -1,147 +1,57 @@
-# :ribbon: Hi! I'm Shiori, a Bootstrap-based Jekyll Theme. :ribbon:
+Scribble
+========
 
-![](https://cloud.githubusercontent.com/assets/992008/3955483/2b9a77ae-2702-11e4-9f28-6afb051271de.png)
+A Jekyll theme. [Want a demo? click and read instruction. :point_left:](http://scribble.muan.co/2013/05/06/scribble-the-jekyll-theme/)
+<br />
+[More themes](https://github.com/muan/muan.github.com/releases).
 
-## :ribbon: Live Demo :ribbon:
+![screenshot](https://cloud.githubusercontent.com/assets/1153134/11014801/12c7940a-853e-11e5-9f7b-87325c9bc695.png)
 
-### [You can view the live demo of myself here](http://ellekasai.github.io/shiori).
+There is no clever design philosophy to talk about, I tried to find something to work with, and 'scribble' came to my mind.
 
-## :ribbon: Screenshots :ribbon:
+This theme uses Open Sans powered by Google Web Fonts, and was written in plain HTML, SCSS & CoffeeScript, though .scss & .coffee files wouldn't be included in the theme.
 
-### Desktop/Tablet
-
-![](http://cl.ly/image/3a2M1D3E3b3d/screenshot%202014-08-30%20at%206.51.34%20PM.png)
-
-## :ribbon: Color Schemes :ribbon:
-
-I wear different colors (based on [Flat UI Colors](http://flatuicolors.com/)):
-
-### Dark
-
-![](http://cl.ly/image/3d3T3b3E0b45/screenshot%202014-08-30%20at%206.48.56%20PM.png)
+The theme is mobile optimized but I did not check browser compatibility. It looks great in Chrome, Safari and Firefox though.
 
 ---
 
-### Turquoise
+### Get started
 
-![](http://cl.ly/image/1s1k3m1E3n37/screenshot%202014-08-30%20at%206.49.02%20PM.png)
-
----
-
-### Green
-
-![](http://cl.ly/image/0G0G3u392I11/screenshot%202014-08-30%20at%206.49.08%20PM.png)
-
----
-
-### Blue
-
-![](http://cl.ly/image/1V1C0n2U0c1s/screenshot%202014-08-30%20at%206.49.14%20PM.png)
+1. [Fork the repository](https://github.com/muan/scribble/fork).
+2. Clone the repository to your computer.<br /> `git clone https://github.com/username/scribble`
+3. `bundle install`
+4. **Using older versions of Jekyll**<br />
+  Build and run Jekyll using `jekyll --server --auto`.<br />
+  **Using [Jekyll 1.0](http://blog.parkermoore.de/2013/05/06/jekyll-1-dot-0-released/)**<br />
+  Build Jekyll using `jekyll build`.<br />
+  Then run Jekyll using `jekyll serve --watch`, go to http://localhost:4000 for your site.
 
 ---
 
-### Purple
+### Make it yours
 
-![](http://cl.ly/image/1V283M0f1K08/screenshot%202014-08-30%20at%206.49.19%20PM.png)
-
----
-
-### Orange
-
-![](http://cl.ly/image/2d2k010J3z3g/screenshot%202014-08-30%20at%206.49.24%20PM.png)
+1. I have extracted most user specific information to `_config.yml`, you should be able to set up almost everything from it.
+2. Change about.md for blog intro.
+3. For domain settings, see [the guide from GitHub](https://help.github.com/articles/setting-up-a-custom-domain-with-pages).
 
 ---
 
-### Red
+### Options
 
-![](http://cl.ly/image/10080E2G3c1e/screenshot%202014-08-30%20at%206.49.31%20PM.png)
+When writing a post, there are 3 options you can add to the header.
+
+1. **disqus: y**<br />
+  If disqus is set to 'y', at the end of the post there will be a disqus thread, just like this one. To use disqus, you MUST [set up your own disqus account](http://disqus.com/).
+
+2. **share: y**<br />
+  An option for showing tweet and like button under a post.
+
+3. **date**: 2013-05-06 18:07:17<br />
+  Date is not a required header since Jekyll reads the file name for date, this was added in only for the **signoff time**. (as shown at the end of this post) If you don't want the signoff time, go into `/includes/signoff.html` remove the `<span>`, and remove `{% include signoff.html %}` from `/layouts/post.html`.
 
 ---
 
-## :ribbon: Usage :ribbon:
+### The end
 
-**Note:** If you're not familiar with Jekyll, please read up on [Jekyll's documentation](http://jekyllrb.com/) first.
-
-[Fork this repo](http://github.com/ellekasai/shiori/fork), clone it, and then run:
-
-```
-bundle install
-```
-
-...which installs `github-pages` gem. After that, run the server:
-
-```
-jekyll serve --watch
-```
-
-### :warning: Warning :warning:
-
-Once the server is started, you must go to [http://localhost:4000/shiori/](http://localhost:4000/shiori/), since `baseurl` is set as `"/shiori"` initially.
-
-To use  http://localhost:4000/, change `baseurl` in `_config.yml` to `""` .
-
-### Keeping Shiori Up to Date
-
-To keep Shiori up to date, follow these steps:
-
-1. [Configure a remote for a fork](https://help.github.com/articles/configuring-a-remote-for-a-fork)
-2. [Sync a fork](https://help.github.com/articles/syncing-a-fork) (**Note**: Use `gh-pages` instead of `master`.)
-
-## :ribbon: Customization :ribbon:
-
-### Required
-
-You **should** change these files before deploying:
-
-* `_config.yml`: You must change `baseurl`, `url`, and `title`. Others are optional.
-  * Make sure to restart the server after you update `_config.yml`.
-* `CNAME`: Change this to host Shiori on a custom domain.
-* `README.md`: Write your own README!
-* `_includes/nav.html`: Modify or remove navigation links.
-* `_includes/nav-right.html`: Modify or remove navigation links.
-* `_includes/sidebar.html`: Customize the side bar.
-* `_includes/post-header.html`: Customize the post header.
-* `_includes/post-footer.html`: Customize the post footer.
-* `_includes/footer.html`: Add copyright info, etc.
-
-### Optional
-
-You **may** customize these files - they're optional:
-
-* `favicon.ico`: Favicon.
-* `about.html`: About page. Currently not linked from anywhere.
-* `_includes/head.html`: Extra stuff in the `<head>` tag.
-* `_includes/scripts.html`: Extra stuff before the `</body>` tag.
-* `_includes/post-header-home.html`: Customize the post header on the home page.
-
-### Customize the Theme
-
-To change my color theme, edit `_data/theme.yml`.
-
-### Add Your Own CSS
-
-You can customize CSS by editing these files:
-
-* `_sass/custom-bootstrap-variables.scss`: Change Bootstrap variables ([documentation](http://getbootstrap.com/customize)).
-* `_sass/custom-scss.scss`: Add your own custom CSS.
-
-### Category Pages
-
-If you want to make category pages, you must manually push the generated `_site` directory to GitHub. If you're still okay with that, [@alextsui05](https://github.com/alextsui05) made an [excellent demo and tutorial for category pages](http://alextsui05.github.io/shiori/categories-in-shiori/). You can see his code on [this pull request](https://github.com/ellekasai/shiori/pull/11).
-
-## :ribbon: Author :ribbon:
-
-#### Elle Kasai
-
-![](https://avatars0.githubusercontent.com/u/2410692?v=2&s=200)
-
-* http://twitter.com/ellekasai
-* http://github.com/ellekasai
-
-#### Special Thanks
-
-* [Shu Uesugi](http://github.com/chibicode) - for the guidance on this project.
-
-### License
-
-[MIT License](http://ellekasai.mit-license.org/)
+Like it? [Tell me](http://twitter.com/muanchiou).<br/>
+Question? [Use GitHub Issues](https://github.com/muan/scribble/issues).

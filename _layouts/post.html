@@ -1,44 +1,35 @@
----
-layout: default
----
+<html>
+  <head>
+    <meta content='{{ page.title }} - {{ site.title }}' property='og:title' />
+    <title>{{ page.title }} - {{ site.title }}</title>
+    {% include head.html %}
+  </head>
+  <body>
+    {% include header.html %}
+    <div id='container'>
+      {% include links.html %}
+      {% include pages.html %}
+      <div class="content">
+        <section class='post'>
+          <h1 class="upcase">
+            <div class='date'>{{ page.date | date_to_string }}</div>
+            {{ page.title }}
+          </h1>
+          {{ content }}
+          {% include signoff.html %}
 
-<div class="post-header">
-  <h1 class="post-title-main">{{ page.title }}</h1>
-  {% include post-header.html %}
-</div>
-<div class="post-content">
-  {{ content }}
-</div>
-<div class="post-footer">
-  {% include post-footer.html %}
-</div>
-{% if site.data.theme.show_post_navs %}
-  {% if page.previous or page.next %}
-    <div class="post-navs row">
-      {% if page.previous %}
-        <div class="col-md-6 post-nav">
-          <h3 class="section-header">
-           Ранее 
-            <span class="text-muted"> &middot; </span>
-            <a href="{{ "/archive" | prepend:site.baseurl }}">К архиву ({{ site.posts.size }})</a>
-          </h3>
-          <h2 class="post-title-link"><a href="{{ page.previous.url | prepend:site.baseurl }}">{{ page.previous.title }}</a></h2>
-          {{ page.previous.excerpt | markdownify }}
-        </div>
+
+        </section>
+      </div>
+      {% if page.share == 'y' %}
+        {% include share.html %}
       {% endif %}
-      {% if page.next %}
-        <div class="col-md-6 post-nav">
-          <h3 class="section-header">
-           Далее 
-            {% unless page.previous %}
-              <span class="text-muted"> &middot; </span>
-              <a href="{{ "/archive" | prepend:site.baseurl }}">К архиву ({{ site.posts.size }})</a>
-            {% endunless %}
-          </h3>
-          <h2 class="post-title-link"><a href="{{ page.next.url | prepend:site.baseurl }}">{{ page.next.title }}</a></h2>
-          {{ page.next.excerpt | markdownify }}
-        </div>
+
+      {% if page.disqus == 'y' %}
+        {% include disqus.html %}
       {% endif %}
+      {% include links.html %}
     </div>
-  {% endif %}
-{% endif %}
+    {% include footer.html %}
+  </body>
+</html>
