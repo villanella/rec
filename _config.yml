@@ -5,10 +5,10 @@ permalink:           pretty
 relative_permalinks: true
 
 # Setup
-title:               Poole
-tagline:             The Jekyll Butler
+title:               Text Mining Log
+tagline:             Data Science, AI, NLP
 url:                 http://rec.ling.cf
-paginate:            1
+paginate:            3 
 baseurl:             ""
 
 # Assets
@@ -20,14 +20,14 @@ sass:
 
 # About/contact
 author:
-  name:              Mark Otto
-  url:               https://twitter.com/mdo
-  email:             markdotto@gmail.com
+  name:              NK 
+  url:               
+  email:             
 
 # Custom vars
-version:             2.0.0
-github:
-  repo:              https://github.com/poole/poole
+# version:             2.0.0
+# github:
+#  repo:              https://github.com/poole/poole
 
 pages_list:       
       About: '/about'
