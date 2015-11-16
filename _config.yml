@@ -7,7 +7,7 @@ relative_permalinks: true
 # Setup
 title:               Text Mining Log
 tagline:             Data Science, AI, NLP
-url:                 http://rec.ling.cf
+url:                 http://textmining.ml
 paginate:            3 
 baseurl:             ""
 
